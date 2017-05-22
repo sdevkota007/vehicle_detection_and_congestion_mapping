@@ -1,0 +1,39 @@
+import MySQLdb
+from MySQLdb import *
+
+
+db = MySQLdb.connect(host='localhost', user='root', passwd='2864',db='traffic_record')
+cursor=db.cursor()
+
+# `Date` INT NOT NULL AUTO_INCREMENT COMMENT '',
+sql = '''CREATE TABLE `traffic_record`.`RoadA` (
+  `Id` INT NOT NULL AUTO_INCREMENT COMMENT '',
+  `Date` VARCHAR(20) NOT NULL COMMENT '',
+  `Day` VARCHAR(20) NOT NULL COMMENT '',
+  `10:00-10:15` VARCHAR(10) NULL COMMENT '',
+  `10:15-10:30` VARCHAR(10) NULL COMMENT '',
+  `10:30-10:45` VARCHAR(10) NULL COMMENT '',
+  `10:45-11:00` VARCHAR(10) NULL COMMENT '',
+  `11:00-11:15` VARCHAR(10) NULL COMMENT '',
+  `11:15-11:30` VARCHAR(10) NULL COMMENT '',
+  `11:30-11:45` VARCHAR(10) NULL COMMENT '',
+  `11:45-12:00` VARCHAR(10) NULL COMMENT '',
+  `12:00-12:15` VARCHAR(10) NULL COMMENT '',
+  `12:15-12:30` VARCHAR(10) NULL COMMENT '',
+  `12:30-12:45` VARCHAR(10) NULL COMMENT '',
+  `12:45-01:00` VARCHAR(10) NULL COMMENT '',
+  `01:00-01:15` VARCHAR(10) NULL COMMENT '',
+  `01:15-01:30` VARCHAR(10) NULL COMMENT '',
+  `01:30-01:45` VARCHAR(10) NULL COMMENT '',
+  `01:45-02:00` VARCHAR(10) NULL COMMENT '',
+
+
+   PRIMARY KEY (`id`)  COMMENT '',
+   UNIQUE INDEX `Id_UNIQUE` (`Id` ASC)  COMMENT '')'''
+
+
+
+cursor.execute(sql)
+
+db.commit()
+db.close()

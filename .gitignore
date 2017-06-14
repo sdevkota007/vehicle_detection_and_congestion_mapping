@@ -64,18 +64,18 @@ instance/
 .scrapy
 
 #pyc
-.pyc
+*.pyc
 
 #csvfile
-.csv
+*.csv
 
 #textfile
-.txt
+*.txt
 
 #video_files
-.mp4
-.avi
-.mkv
+*.mp4
+*.avi
+*.mkv
 
 # PyBuilder
 target/
